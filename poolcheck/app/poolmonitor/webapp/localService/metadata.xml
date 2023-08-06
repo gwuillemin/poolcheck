@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="PoolCheckService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="OrpValues" EntityType="PoolCheckService.OrpValues"/>
+                <EntitySet Name="OrpLive" EntityType="PoolCheckService.OrpLive"/>
+                <EntitySet Name="ChlorinePump" EntityType="PoolCheckService.ChlorinePump"/>
+            </EntityContainer>
+            <EntityType Name="OrpValues">
+                <Key>
+                    <PropertyRef Name="date"/>
+                </Key>
+                <Property Name="date" Type="Edm.DateTimeOffset" Nullable="false"/>
+                <Property Name="orp" Type="Edm.Decimal" Scale="variable"/>
+            </EntityType>
+            <EntityType Name="OrpLive">
+                <Key>
+                    <PropertyRef Name="date"/>
+                </Key>
+                <Property Name="date" Type="Edm.DateTimeOffset" Nullable="false"/>
+                <Property Name="orp" Type="Edm.Decimal" Scale="variable"/>
+            </EntityType>
+            <EntityType Name="ChlorinePump">
+                <Key>
+                    <PropertyRef Name="date"/>
+                </Key>
+                <Property Name="date" Type="Edm.DateTimeOffset" Nullable="false"/>
+                <Property Name="onoff" Type="Edm.String"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

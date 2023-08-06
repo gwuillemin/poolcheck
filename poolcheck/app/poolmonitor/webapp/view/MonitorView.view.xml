@@ -1,0 +1,79 @@
+ <mvc:View 
+ controllerName="guy.poolcheck.poolmonitor.controller.MonitorView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+   xmlns:f="sap.ui.layout.form"
+    xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+     xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:core="sap.ui.core" xmlns:viz.data="sap.viz.ui5.data" height="100%">
+    <layout:FixFlex id='chartFixFlex' minFlexSize="250">
+        <!--Below is the setting panel -->
+        <layout:fixContent>
+            <f:SimpleForm id="SimpleFormDisplay354"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="ORP" />
+				<Text text="{live>/OrpLive}" />
+				<Label text="Chlorine Pump" />
+				<Text text="{live>/onoff}" />
+                <Label text="Avg ORP" />
+				<Text text="{live>/OrpValue}" />
+				
+			</f:content>
+		</f:SimpleForm>
+        </layout:fixContent>
+        <layout:flexContent>
+            
+            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='timeseries_line'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset id="OrpLiveId" data="{path:'/RunValues',
+                    sorter : {                          
+                path : 'date'  ,descending: true                             
+            } 
+                     }">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Date"
+                                value="{date}" dataType="date"/>
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="ORP"
+                                value="{orp}" />
+                                <viz.data:MeasureDefinition name="On"
+                                value="{onoff}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                    
+                </viz:dataset>
+
+                <viz:feeds>
+               
+                    <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                        values="ORP" />
+                        <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                        values="On" />
+                         <viz.feeds:FeedItem uid="timeAxis" type="Dimension"
+                        values="Date" />
+                         
+                    
+                </viz:feeds>
+            </viz:VizFrame>
+        </layout:flexContent>
+    </layout:FixFlex>
+</mvc:View>
