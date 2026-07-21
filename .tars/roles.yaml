@@ -1,0 +1,20 @@
+# Tars project roles
+
+schema_version: 1
+roles:
+  project_owner:
+    name: "Project Owner"
+    instructions: |-
+      keep responses outcome-focused and avoid technical depth unless requested.
+  maintainer:
+    name: "Maintainer"
+    instructions: |-
+      include relevant repository, branch, and review details.
+  contributor:
+    name: "Contributor"
+    instructions: |-
+      focus on assigned work, context, and next actions.
+  reviewer:
+    name: "Reviewer"
+    instructions: |-
+      focus on risks, decision quality, and evidence needed for approval.

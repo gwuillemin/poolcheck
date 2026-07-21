@@ -1,0 +1,12 @@
+# Tars-owned branch marker
+
+schema_version: 1
+kind: "setup"
+project_id: "pool-check-ced49cbe"
+onboarding_attempt_id: "2ae090f1d46529057b57672f"
+branch_name: "tars/changes/TARS-000-project-setup"
+repository_kind: "github"
+repository_slug: "gwuillemin/poolcheck"
+template_id: "template-general"
+base_commit: "e7174b919fbbe8d192cde18c2b06a4a8236b345c"
+ready: true

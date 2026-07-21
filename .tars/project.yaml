@@ -1,0 +1,49 @@
+# Tars project configuration
+
+schema_version: 1
+project:
+  id: "pool-check-ced49cbe"
+  name: "Pool Check"
+repository:
+  kind: "github"
+  slug: "gwuillemin/poolcheck"
+  default_branch: "main"
+template:
+  id: "template-general"
+  name: "General"
+  category: "General"
+  version: "1.0.0"
+  applied_at: "2026-07-21T10:08:14.557Z"
+branches:
+  state: "tars/state"
+  change_prefix: "tars/changes/"
+  integration_prefix: "tars/integration/"
+  setup: "tars/changes/TARS-000-project-setup"
+setup:
+  initialized: false
+  first_memory_file: "docs/tars/charter.md"
+
+manifest:
+  - path: ".tars/instructions.md"
+    kind: "file"
+    purpose: "Defines the project-specific instructions used by Tars in discussion and repository work."
+    setup_responsibility: "Tars creates during onboarding; project owner reviews later changes."
+    required: true
+    applied_hash: "89870a6fc55983024646f857ee5285028d950e062235a9f1b7d7b49083cdc30e"
+  - path: ".tars/project.yaml"
+    kind: "file"
+    purpose: "Records repository identity, setup state, selected template provenance, branches, and the applied file manifest."
+    setup_responsibility: "Tars creates during onboarding; project owner reviews later changes."
+    required: true
+  - path: ".tars/roles.yaml"
+    kind: "file"
+    purpose: "Maps stable project role IDs to the instructions Tars uses for the authenticated user."
+    setup_responsibility: "Project owner maintains role source through reviewed changes."
+    required: true
+    applied_hash: "4c402f98ae09bf626ad1a67eb92bfd159b5c493fb784546a40fe93b53382e4cc"
+  - path: "docs/tars/charter.md"
+    kind: "file"
+    purpose: "Captures goals, values, principles, constraints, people, and success criteria."
+    setup_responsibility: "Project owner completes during first-run setup."
+    required: true
+    applied_hash: "06b10d7fff1be8346bd8aaccce30d98b0fda7f07331422a0f7dc415c7cef1217"
