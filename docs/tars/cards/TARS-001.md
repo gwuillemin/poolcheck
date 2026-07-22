@@ -24,13 +24,13 @@ execution_state: "succeeded"
 branch_prepared: "true"
 capability_reason: "Tars can execute this repository change with tools in an isolated disposable card runner."
 readiness_state: "proposed"
-readiness_outcome: "A readable HTML help document that explains what Pool Check is able to do and how its architecture is organized."
-readiness_scope: "A single HTML document focused on project overview, capabilities, and architecture summary."
-readiness_acceptance_criteria: "[\"HTML help document exists in the project documentation output location.\",\"It describes the project purpose in clear, user-friendly language.\",\"It explains the main architecture components at a practical level.\",\"It reads as a standalone document for someone onboarding to the project.\",\"It does not invent capabilities not supported by the repository.\"]"
+readiness_outcome: "A readable HTML help document that explains what Pool Check is able to do and how its architecture is organized, optionally with a diagram."
+readiness_scope: "A single HTML document focused on project overview, capabilities, architecture summary, and a simple diagram if useful."
+readiness_acceptance_criteria: "[\"HTML help document exists in the project documentation output location.\",\"It describes the project purpose in clear, user-friendly language.\",\"It explains the main architecture components at a practical level.\",\"It may include a diagram that helps explain the architecture.\",\"It does not invent capabilities not supported by the repository.\"]"
 readiness_constraints: "[\"Use repository source files as the source of truth.\",\"Keep the document concise and readable.\",\"Do not write directly to main; use the isolated change flow.\"]"
-readiness_open_questions: "[\"Should this be a high-level overview for a non-technical reader, or a deeper architecture walkthrough?\"]"
-readiness_summary: "Create a readable HTML help document covering what the project does and how it is structured."
-readiness_assessed_at: "2026-07-22T02:08:53.699Z"
+readiness_open_questions: "[\"Should the diagram be a simple high-level overview or a more detailed component/flow diagram?\"]"
+readiness_summary: "The document can include a diagram, as long as it stays accurate and easy to read."
+readiness_assessed_at: "2026-07-22T02:12:58.572Z"
 interaction_intent: "draft_change"
 governance_outcome: "draft_now"
 promotion_state: "eligible"
@@ -65,18 +65,18 @@ Tars is authoring and publishing the project document on the isolated branch.
 
 ### Desired outcome
 
-A readable HTML help document that explains what Pool Check is able to do and how its architecture is organized.
+A readable HTML help document that explains what Pool Check is able to do and how its architecture is organized, optionally with a diagram.
 
 ### Scope
 
-A single HTML document focused on project overview, capabilities, and architecture summary.
+A single HTML document focused on project overview, capabilities, architecture summary, and a simple diagram if useful.
 
 ### Acceptance criteria
 
 - HTML help document exists in the project documentation output location.
 - It describes the project purpose in clear, user-friendly language.
 - It explains the main architecture components at a practical level.
-- It reads as a standalone document for someone onboarding to the project.
+- It may include a diagram that helps explain the architecture.
 - It does not invent capabilities not supported by the repository.
 
 ### Constraints
@@ -87,4 +87,4 @@ A single HTML document focused on project overview, capabilities, and architectu
 
 ### Open questions
 
-- Should this be a high-level overview for a non-technical reader, or a deeper architecture walkthrough?
+- Should the diagram be a simple high-level overview or a more detailed component/flow diagram?
