@@ -21,7 +21,7 @@ artifact_scope: "mixed_or_unknown"
 execution_mode: "tars"
 delivery_owner: "tars"
 execution_state: "in_progress"
-branch_prepared: false
+branch_prepared: "true"
 capability_reason: "Tars can execute this repository change with tools in an isolated disposable card runner."
 readiness_state: "proposed"
 readiness_outcome: "A readable HTML help document that explains what Pool Check is able to do and how its architecture is organized."
