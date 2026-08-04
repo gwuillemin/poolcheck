@@ -1,0 +1,41 @@
+schema_version: 1
+knowledge_item_types:
+  idea:
+    enabled: true
+    identify_when: Record only a durable, concrete project possibility that has not been accepted. It
+      must materially advance or test an accepted Goal, and the proposed direction must be
+      compatible with the project's Values and Principles. Require evidence from the source and an
+      exact grounding excerpt from the accepted charter; never infer the relationship. Exclude
+      requests for work, Action creation or status, delivery or completion claims, failures,
+      retries, troubleshooting, corrections of Tars, questions, acknowledgements, and passing
+      discussion.
+    conflict_action: create_new
+  decision:
+    enabled: true
+    identify_when: Record only a durable choice that the source explicitly shows project participants
+      have made. It must materially support an accepted Goal and be compatible with the project's
+      Values and Principles. Require evidence from the source and an exact grounding excerpt from
+      the accepted charter; never turn a request, proposal, or Tars statement into a decision.
+      Exclude Action or work status, delivery or completion claims, failures, retries,
+      troubleshooting, corrections of Tars, questions, acknowledgements, and passing discussion.
+    conflict_action: create_new
+  information:
+    enabled: true
+    identify_when: Record only a durable, project-specific fact, source, measurement, constraint, or
+      contextual detail that materially affects an accepted Goal or how a Value or Principle is
+      applied. Require evidence from the source and an exact grounding excerpt from the accepted
+      charter; do not infer either the fact or its project relevance. Exclude Action creation,
+      execution, status, failure, retry, or completion; claims about whether Tars created a
+      document, application, file, or other work product; troubleshooting, corrections or feedback
+      about Tars, requests, questions, acknowledgements, and other transient conversation.
+    conflict_action: update_existing
+  assumption:
+    enabled: true
+    identify_when: Record only a durable, project-specific proposition that the team is explicitly
+      treating as true pending validation. It must materially affect an accepted Goal and be
+      compatible with the project's Values and Principles; the dependency and need for validation
+      must be clear. Require evidence from the source and an exact grounding excerpt from the
+      accepted charter; never infer them. Exclude ordinary uncertainty, Action or work status,
+      delivery or completion claims, failures, retries, troubleshooting, corrections of Tars,
+      requests, questions, acknowledgements, and passing discussion.
+    conflict_action: create_new
